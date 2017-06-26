@@ -14,6 +14,8 @@ FOUNDATION_EXPORT const unsigned char SampleLibVersionString[];
 
 - (instancetype)init;
 
+- (void)hello;
+
 @end
 
 #endif //CPP_FRAMEWORK_BUNDLE_SAMPLELIB_H

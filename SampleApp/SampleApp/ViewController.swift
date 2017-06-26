@@ -13,10 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let _ = SampleLib()
-//        let _ = Lib()
-//        print("lib: \(lib)")
-//        lib.hello()
+        let sampleLib: SampleLib = .init()
+        sampleLib.hello()
 
         view.backgroundColor = UIColor.white
     }

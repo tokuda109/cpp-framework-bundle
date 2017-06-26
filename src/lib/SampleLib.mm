@@ -4,11 +4,25 @@
 
 #include "SampleLib.h"
 
+#include "sample.h"
+
+@interface SampleLib () {
+    Sample *sample;
+}
+
+@end
+
 @implementation SampleLib
 
 - (instancetype)init {
     self = [super init];
+    if (self) {
+        sample = new Sample();
+    }
     return self;
+}
+
+- (void)hello {
 }
 
 @end

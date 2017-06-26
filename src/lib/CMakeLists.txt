@@ -1,6 +1,5 @@
 
-set(CMAKE_C_FLAGS "-x objective-c")
-set(CMAKE_CXX_FLAGS "-x objective-c++")
+set(CMAKE_SHARED_LINKER_FLAGS "-Wall")
 
 add_library(
     SampleLib SHARED
