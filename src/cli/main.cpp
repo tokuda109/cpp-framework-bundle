@@ -6,6 +6,8 @@
 
 #include <boost/program_options.hpp>
 
+#include "sample.h"
+
 namespace po = boost::program_options;
 
 int main(int argc, char **argv) {
@@ -28,6 +30,8 @@ int main(int argc, char **argv) {
     if (vm.count("help")) {
         std::cout << opt << std::endl;
     } else {
+        Sample sample = Sample();
+        sample.hello();
     }
 
     return EXIT_SUCCESS;
