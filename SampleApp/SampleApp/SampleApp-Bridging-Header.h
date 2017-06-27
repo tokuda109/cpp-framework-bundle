@@ -9,6 +9,8 @@
 #ifndef SampleApp_Bridging_Header_h
 #define SampleApp_Bridging_Header_h
 
+#import <Foundation/Foundation.h>
+
 #import <SampleLib/SampleLib.h>
 
 #endif /* SampleApp_Bridging_Header_h */

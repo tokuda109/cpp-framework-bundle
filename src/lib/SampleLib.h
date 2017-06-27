@@ -12,10 +12,10 @@ FOUNDATION_EXPORT const unsigned char SampleLibVersionString[];
 
 @interface SampleLib : NSObject
 
-- (instancetype)init;
++ (void)world;
 
 - (void)hello;
 
 @end
 
-#endif //CPP_FRAMEWORK_BUNDLE_SAMPLELIB_H
+#endif // CPP_FRAMEWORK_BUNDLE_SAMPLELIB_H

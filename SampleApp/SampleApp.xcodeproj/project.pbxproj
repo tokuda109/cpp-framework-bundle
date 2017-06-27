@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C81CB7481F00B03C00241622 /* SampleLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81CB7471F00B03C00241622 /* SampleLib.framework */; };
+		C87269EB1F01F10B00AFD41B /* SampleLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87269EA1F01F10B00AFD41B /* SampleLib.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C8C143311F00AB4600483FD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C143301F00AB4600483FD0 /* AppDelegate.swift */; };
 		C8C143331F00AB4600483FD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C143321F00AB4600483FD0 /* ViewController.swift */; };
 		C8C143381F00AB4600483FD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C143371F00AB4600483FD0 /* Assets.xcassets */; };
@@ -16,7 +16,7 @@
 
 /* Begin PBXFileReference section */
 		C81CB7461F00AF3800241622 /* SampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		C81CB7471F00B03C00241622 /* SampleLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SampleLib.framework; sourceTree = "<group>"; };
+		C87269EA1F01F10B00AFD41B /* SampleLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SampleLib.framework; sourceTree = "<group>"; };
 		C8C1432D1F00AB4600483FD0 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C143301F00AB4600483FD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8C143321F00AB4600483FD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,7 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C81CB7481F00B03C00241622 /* SampleLib.framework in Frameworks */,
+				C87269EB1F01F10B00AFD41B /* SampleLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +70,7 @@
 		C8C143421F00AE3C00483FD0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C81CB7471F00B03C00241622 /* SampleLib.framework */,
+				C87269EA1F01F10B00AFD41B /* SampleLib.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -269,7 +269,8 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = SampleApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cpp-framework-bundle.sample-app.SampleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SampleApp/SampleApp-Bridging-Header.h";
@@ -287,7 +288,8 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = SampleApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cpp-framework-bundle.sample-app.SampleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SampleApp/SampleApp-Bridging-Header.h";

@@ -2,9 +2,8 @@
 // Created by Tsuyoshi Tokuda on 2017/06/26.
 //
 
-#include "SampleLib.h"
-
-#include "sample.h"
+#import "SampleLib.h"
+#import "sample.h"
 
 @interface SampleLib () {
     Sample *sample;
@@ -13,6 +12,9 @@
 @end
 
 @implementation SampleLib
+
++ (void)world {
+}
 
 - (instancetype)init {
     self = [super init];

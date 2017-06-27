@@ -8,18 +8,20 @@
 
 import UIKit
 
+//import SampleLib
+
 class ViewController: UIViewController {
+
+    var sampleLib: SampleLib?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let sampleLib: SampleLib = .init()
-        sampleLib.hello()
+        SampleLib.world()
+//        sampleLib = SampleLib.init()
+
+//        sampleLib?.hello()
 
         view.backgroundColor = UIColor.white
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 }
