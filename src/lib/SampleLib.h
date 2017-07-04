@@ -7,9 +7,6 @@ FOUNDATION_EXPORT double SampleLibVersionNumber;
 //! Project version string for Lib.
 FOUNDATION_EXPORT const unsigned char SampleLibVersionString[];
 
-#ifndef CPP_FRAMEWORK_BUNDLE_SAMPLELIB_H
-#define CPP_FRAMEWORK_BUNDLE_SAMPLELIB_H
-
 @interface SampleLib : NSObject
 
 + (void)world;
@@ -17,5 +14,3 @@ FOUNDATION_EXPORT const unsigned char SampleLibVersionString[];
 - (void)hello;
 
 @end
-
-#endif // CPP_FRAMEWORK_BUNDLE_SAMPLELIB_H

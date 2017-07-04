@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C87269EB1F01F10B00AFD41B /* SampleLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87269EA1F01F10B00AFD41B /* SampleLib.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C87269EB1F01F10B00AFD41B /* SampleLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87269EA1F01F10B00AFD41B /* SampleLib.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		C8C143311F00AB4600483FD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C143301F00AB4600483FD0 /* AppDelegate.swift */; };
 		C8C143331F00AB4600483FD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C143321F00AB4600483FD0 /* ViewController.swift */; };
 		C8C143381F00AB4600483FD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C143371F00AB4600483FD0 /* Assets.xcassets */; };
@@ -269,7 +269,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = SampleApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks @loader_path/../Frameworks @loader_path/../Frameworks/SampleLib.framework";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cpp-framework-bundle.sample-app.SampleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -288,7 +288,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = SampleApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks @loader_path/../Frameworks @loader_path/../Frameworks/SampleLib.framework";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cpp-framework-bundle.sample-app.SampleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
