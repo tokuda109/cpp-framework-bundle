@@ -28,7 +28,8 @@
 }
 
 - (void)hello {
-std::cout << "hello" << std::endl;
+    std::cout << "hello" << std::endl;
+    sample->hello();
 }
 
 @end
