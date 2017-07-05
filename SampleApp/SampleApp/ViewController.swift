@@ -17,6 +17,9 @@ class ViewController: UIViewController {
 
         SampleLib.world()
 
+        sampleLib = SampleLib()
+        sampleLib?.hello()
+
         view.backgroundColor = UIColor.white
     }
 }
