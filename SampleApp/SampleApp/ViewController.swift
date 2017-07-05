@@ -8,8 +8,6 @@
 
 import UIKit
 
-//import SampleLib
-
 class ViewController: UIViewController {
 
     var sampleLib: SampleLib?
@@ -18,9 +16,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         SampleLib.world()
-//        sampleLib = SampleLib.init()
-
-//        sampleLib?.hello()
 
         view.backgroundColor = UIColor.white
     }

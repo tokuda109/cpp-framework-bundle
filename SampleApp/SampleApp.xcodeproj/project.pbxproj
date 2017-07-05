@@ -7,12 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C87269EB1F01F10B00AFD41B /* SampleLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87269EA1F01F10B00AFD41B /* SampleLib.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		C8A6B7921F0CCABA0068C9CD /* SampleLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87269EA1F01F10B00AFD41B /* SampleLib.framework */; };
+		C8A6B7931F0CCABA0068C9CD /* SampleLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C87269EA1F01F10B00AFD41B /* SampleLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C8C143311F00AB4600483FD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C143301F00AB4600483FD0 /* AppDelegate.swift */; };
 		C8C143331F00AB4600483FD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C143321F00AB4600483FD0 /* ViewController.swift */; };
 		C8C143381F00AB4600483FD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C143371F00AB4600483FD0 /* Assets.xcassets */; };
 		C8C1433B1F00AB4600483FD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C143391F00AB4600483FD0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C8A6B7941F0CCABA0068C9CD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C8A6B7931F0CCABA0068C9CD /* SampleLib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C81CB7461F00AF3800241622 /* SampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -30,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C87269EB1F01F10B00AFD41B /* SampleLib.framework in Frameworks */,
+				C8A6B7921F0CCABA0068C9CD /* SampleLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,7 @@
 				C8C143291F00AB4600483FD0 /* Sources */,
 				C8C1432A1F00AB4600483FD0 /* Frameworks */,
 				C8C1432B1F00AB4600483FD0 /* Resources */,
+				C8A6B7941F0CCABA0068C9CD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

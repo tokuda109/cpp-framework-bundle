@@ -6,7 +6,7 @@ set(PACKAGE_NAME "cpp-framework-bundle")
 set(PACKAGE_VERSION "1.0.0")
 
 set(FRAMEWORK_NAME "SampleLib")
-set(FRAMEWORK_BUNDLE_IDENTIFIER "com.cpp-framework-bundle")
+set(FRAMEWORK_BUNDLE_IDENTIFIER "jp.tokuda109.cpp-framework-bundle")
 
 set(CODE_SIGN_IDENTITY "iPhone Developer")
 set(IPHONEOS_DEPLOYMENT_TARGET 8.0)
