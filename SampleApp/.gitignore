@@ -12,5 +12,6 @@
 xcuserdata/
 
 Frameworks/*
+Pods/
 
 !.gitkeep

@@ -6,7 +6,7 @@ set(PACKAGE_NAME "cpp-framework-bundle")
 set(PACKAGE_VERSION "1.0.0")
 
 set(FRAMEWORK_NAME "SampleLib")
-set(FRAMEWORK_BUNDLE_IDENTIFIER "jp.tokuda109.cpp-framework-bundle")
+set(FRAMEWORK_BUNDLE_IDENTIFIER "com.cpp-framework-bundle")
 
 set(CODE_SIGN_IDENTITY "iPhone Developer")
 set(IPHONEOS_DEPLOYMENT_TARGET 8.0)
@@ -25,5 +25,5 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fobjc-arc")
 
 project(${PACKAGE_NAME})
 
-add_subdirectory(src/cli)
+# add_subdirectory(src/cli)
 add_subdirectory(src/lib)
