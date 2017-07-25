@@ -20,6 +20,9 @@
 
 - (instancetype)init {
     self = [super init];
+    if (self) {
+        sampleLib = [SampleLib init];
+    }
     return self;
 }
 

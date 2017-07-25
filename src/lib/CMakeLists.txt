@@ -166,8 +166,6 @@ add_library(
     sample.cpp
 )
 
-# message(STATUS "PROJECT_SOURCE_DIR: ${PROJECT_SOURCE_DIR}")
-
 set_target_properties(
     ${FRAMEWORK_NAME} PROPERTIES
     LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/SampleApp/Frameworks/
