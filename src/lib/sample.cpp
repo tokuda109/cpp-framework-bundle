@@ -9,7 +9,6 @@ Sample::Sample() {
 }
 
 void Sample::hello() {
-    // std::cout << cv::format("HELLO %.0f", 1.2) << std::endl;
     std::cout << "Hello!" << std::endl;
-    std::cout << CV_MAJOR_VERSION << std::endl;
+    std::cout << "OpenCV ver: " << CV_MAJOR_VERSION << "." << CV_VERSION_MINOR << "." << CV_VERSION_REVISION << std::endl;
 }
