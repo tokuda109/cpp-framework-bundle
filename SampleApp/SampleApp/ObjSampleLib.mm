@@ -6,17 +6,21 @@
 //  Copyright © 2017 Tsuyoshi Tokuda. All rights reserved.
 //
 
-//#import <opencv2/opencv.hpp>
-#include "opencv2/opencv.hpp"
-
 #import <SampleLib/SampleLib.h>
 
 #import "ObjSampleLib.h"
 
-@interface ObjSampleLib ()
+@interface ObjSampleLib () {
+    SampleLib *sampleLib;
+}
 
 @end
 
 @implementation ObjSampleLib
+
+- (instancetype)init {
+    self = [super init];
+    return self;
+}
 
 @end
