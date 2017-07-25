@@ -14,6 +14,7 @@
 		C8C143311F00AB4600483FD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C143301F00AB4600483FD0 /* AppDelegate.swift */; };
 		C8C143331F00AB4600483FD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C143321F00AB4600483FD0 /* ViewController.swift */; };
 		C8C143381F00AB4600483FD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C143371F00AB4600483FD0 /* Assets.xcassets */; };
+		C8FFD5891F2733EE00964508 /* ObjSampleLib.mm in Sources */ = {isa = PBXBuildFile; fileRef = C8FFD5881F2733EE00964508 /* ObjSampleLib.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,9 @@
 		C8C143321F00AB4600483FD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C8C143371F00AB4600483FD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8C1433C1F00AB4600483FD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8FFD5871F2733DF00964508 /* ObjSampleLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjSampleLib.h; sourceTree = "<group>"; };
+		C8FFD5881F2733EE00964508 /* ObjSampleLib.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjSampleLib.mm; sourceTree = "<group>"; };
+		C8FFD58A1F273A8800964508 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 				C8C1433C1F00AB4600483FD0 /* Info.plist */,
 				C81CB7461F00AF3800241622 /* SampleApp-Bridging-Header.h */,
 				C81729131F271AE700E634FD /* LaunchScreen.storyboard */,
+				C8FFD5871F2733DF00964508 /* ObjSampleLib.h */,
+				C8FFD5881F2733EE00964508 /* ObjSampleLib.mm */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -100,6 +106,7 @@
 		C8C143421F00AE3C00483FD0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C8FFD58A1F273A8800964508 /* libc++.tbd */,
 				C87269EA1F01F10B00AFD41B /* SampleLib.framework */,
 				92EB81C14231E7053678C44F /* libPods-SampleApp.a */,
 			);
@@ -115,11 +122,11 @@
 			buildPhases = (
 				F909E026CD6CAD472F6D3262 /* [CP] Check Pods Manifest.lock */,
 				C8C143291F00AB4600483FD0 /* Sources */,
-				C8C1432A1F00AB4600483FD0 /* Frameworks */,
 				C8C1432B1F00AB4600483FD0 /* Resources */,
-				C8A6B7941F0CCABA0068C9CD /* Embed Frameworks */,
+				C8C1432A1F00AB4600483FD0 /* Frameworks */,
 				8D8ADFE97515BE3CBC6F010F /* [CP] Embed Pods Frameworks */,
 				2C19D6C3B565B72C6357A72B /* [CP] Copy Pods Resources */,
+				C8A6B7941F0CCABA0068C9CD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8C143331F00AB4600483FD0 /* ViewController.swift in Sources */,
+				C8FFD5891F2733EE00964508 /* ObjSampleLib.mm in Sources */,
 				C8C143311F00AB4600483FD0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,7 +350,8 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = SampleApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks @loader_path/../Frameworks @loader_path/../Frameworks/SampleLib.framework";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cpp-framework-bundle.sample-app.SampleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -356,13 +365,15 @@
 			baseConfigurationReference = 260239BA5AFE7C1E21DA38E7 /* Pods-SampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				DEVELOPMENT_TEAM = C6U3AGQ8PH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = SampleApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks @loader_path/../Frameworks @loader_path/../Frameworks/SampleLib.framework";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cpp-framework-bundle.sample-app.SampleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";

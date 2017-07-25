@@ -10,15 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var sampleLib: SampleLib?
+    var sampleLib: ObjSampleLib?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        SampleLib.world()
-
-        sampleLib = SampleLib()
-        sampleLib?.hello()
+//        SampleLib.world()
+//
+//        sampleLib = SampleLib()
+//        sampleLib?.hello()
 
         view.backgroundColor = UIColor.white
     }

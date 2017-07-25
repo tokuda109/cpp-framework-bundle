@@ -11,6 +11,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import <SampleLib/SampleLib.h>
+#import "ObjSampleLib.h"
 
 #endif /* SampleApp_Bridging_Header_h */

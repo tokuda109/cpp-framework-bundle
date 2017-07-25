@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.8.2 FATAL_ERROR)
 
+set(CMAKE_CXX_STANDARD 14)
+
 execute_process(
     COMMAND /usr/bin/xcode-select -print-path
     OUTPUT_VARIABLE XCODE_DEVELOPER_DIR
@@ -32,16 +34,16 @@ set(UNIX True)
 set(APPLE True)
 set(IOS True)
 
-  set(CMAKE_OSX_DEPLOYMENT_TARGET "" CACHE STRING "Force unset of the deployment target for iOS" FORCE)
+set(CMAKE_OSX_DEPLOYMENT_TARGET "" CACHE STRING "Force unset of the deployment target for iOS" FORCE)
 
-  find_program (CMAKE_UNAME uname /bin /usr/bin /usr/local/bin)
-  if (CMAKE_UNAME)
-      exec_program(uname ARGS -r OUTPUT_VARIABLE CMAKE_HOST_SYSTEM_VERSION)
-      string (REGEX REPLACE "^([0-9]+)\\.([0-9]+).*$" "\\1" DARWIN_MAJOR_VERSION "${CMAKE_HOST_SYSTEM_VERSION}")
-  endif (CMAKE_UNAME)
+find_program (CMAKE_UNAME uname /bin /usr/bin /usr/local/bin)
+if (CMAKE_UNAME)
+    exec_program(uname ARGS -r OUTPUT_VARIABLE CMAKE_HOST_SYSTEM_VERSION)
+    string (REGEX REPLACE "^([0-9]+)\\.([0-9]+).*$" "\\1" DARWIN_MAJOR_VERSION "${CMAKE_HOST_SYSTEM_VERSION}")
+endif (CMAKE_UNAME)
 
-  set(CMAKE_CXX_COMPILER_WORKS TRUE)
-  set(CMAKE_C_COMPILER_WORKS TRUE)
+set(CMAKE_CXX_COMPILER_WORKS TRUE)
+set(CMAKE_C_COMPILER_WORKS TRUE)
 
 set(CMAKE_SHARED_LIBRARY_PREFIX "lib")
 set(CMAKE_SHARED_LIBRARY_SUFFIX ".dylib")
@@ -141,6 +143,8 @@ elseif (${IOS_PLATFORM} STREQUAL "SIMULATOR64")
     set(IOS_ARCH x86_64)
 endif (${IOS_PLATFORM} STREQUAL "OS")
 
+message(STATUS "IOS_ARCH: ${IOS_ARCH}")
+
 set(CMAKE_OSX_ARCHITECTURES ${IOS_ARCH} CACHE string  "Build architecture for iOS")
 
 set(CMAKE_FIND_ROOT_PATH ${CMAKE_IOS_DEVELOPER_ROOT} ${CMAKE_IOS_SDK_ROOT} ${CMAKE_PREFIX_PATH} CACHE string  "iOS find search path root")
@@ -150,17 +154,24 @@ set(CMAKE_FIND_FRAMEWORK FIRST)
 set(APPLE_IOS ON)
 set(TARGET_IPHONE_SIMULATOR ON)
 
+include(OpenCV)
+
+prepare_opencv()
+
 add_library(
-    ${FRAMEWORK_NAME} SHARED
+    ${FRAMEWORK_NAME} STATIC
     SampleLib.h
     SampleLib.mm
     sample.h
     sample.cpp
 )
 
+# message(STATUS "PROJECT_SOURCE_DIR: ${PROJECT_SOURCE_DIR}")
+
 set_target_properties(
     ${FRAMEWORK_NAME} PROPERTIES
     LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/SampleApp/Frameworks/
+    ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/SampleApp/Frameworks/
     FRAMEWORK ON
     VERSION ${PACKAGE_VERSION}
     FRAMEWORK_VERSION A
@@ -174,3 +185,7 @@ set(
     ${CMAKE_OSX_SYSROOT}/System/Library/PrivateFrameworks
     ${CMAKE_OSX_SYSROOT}/Developer/Library/Frameworks
 )
+
+if (OpenCV_FOUND)
+    target_link_libraries(${FRAMEWORK_NAME} ${OpenCV_LIBS})
+endif()
