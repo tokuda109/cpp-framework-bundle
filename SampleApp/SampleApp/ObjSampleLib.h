@@ -6,6 +6,7 @@
 //  Copyright © 2017 Tsuyoshi Tokuda. All rights reserved.
 //
 
+#import <SampleLib/SampleLib.h>
 #import <Foundation/Foundation.h>
 
 @interface ObjSampleLib : NSObject
