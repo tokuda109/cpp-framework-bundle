@@ -13,7 +13,6 @@
 		C8C143311F00AB4600483FD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C143301F00AB4600483FD0 /* AppDelegate.swift */; };
 		C8C143331F00AB4600483FD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C143321F00AB4600483FD0 /* ViewController.swift */; };
 		C8C143381F00AB4600483FD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C143371F00AB4600483FD0 /* Assets.xcassets */; };
-		C8FFD5891F2733EE00964508 /* ObjSampleLib.mm in Sources */ = {isa = PBXBuildFile; fileRef = C8FFD5881F2733EE00964508 /* ObjSampleLib.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,8 +40,6 @@
 		C8C143321F00AB4600483FD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C8C143371F00AB4600483FD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8C1433C1F00AB4600483FD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8FFD5871F2733DF00964508 /* ObjSampleLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjSampleLib.h; sourceTree = "<group>"; };
-		C8FFD5881F2733EE00964508 /* ObjSampleLib.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjSampleLib.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +90,6 @@
 				C8C1433C1F00AB4600483FD0 /* Info.plist */,
 				C81CB7461F00AF3800241622 /* SampleApp-Bridging-Header.h */,
 				C81729131F271AE700E634FD /* LaunchScreen.storyboard */,
-				C8FFD5871F2733DF00964508 /* ObjSampleLib.h */,
-				C8FFD5881F2733EE00964508 /* ObjSampleLib.mm */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -232,7 +227,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8C143331F00AB4600483FD0 /* ViewController.swift in Sources */,
-				C8FFD5891F2733EE00964508 /* ObjSampleLib.mm in Sources */,
 				C8C143311F00AB4600483FD0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
