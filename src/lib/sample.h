@@ -1,6 +1,5 @@
 
-#ifndef CPP_FRAMEWORK_BUNDLE_SAMPLE_H
-#define CPP_FRAMEWORK_BUNDLE_SAMPLE_H
+#include <opencv2/core.hpp>
 
 class Sample {
 public:
@@ -8,5 +7,3 @@ public:
 
     void hello();
 };
-
-#endif // CPP_FRAMEWORK_BUNDLE_SAMPLE_H

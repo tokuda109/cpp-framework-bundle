@@ -26,7 +26,7 @@ execute_process(
     OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 
-set(CMAKE_SHARED_LINKER_FLAGS "-Wall")
+set(CMAKE_SHARED_LINKER_FLAGS "-Wall -lopencv -pthread")
 
 set(CMAKE_SYSTEM_NAME Darwin)
 set(CMAKE_SYSTEM_VERSION 1)
@@ -59,6 +59,10 @@ set(CMAKE_CXX_OSX_CURRENT_VERSION_FLAG "${CMAKE_C_OSX_CURRENT_VERSION_FLAG}")
 
 set(CMAKE_C_FLAGS_INIT "")
 set(CMAKE_CXX_FLAGS_INIT "-fvisibility=hidden -fvisibility-inlines-hidden")
+
+set (no_warn "-Wno-unused-function -Wno-overloaded-virtual")
+set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${no_warn}")
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++ -fvisibility=hidden -fvisibility-inlines-hidden ${no_warn}")
 
 set(CMAKE_C_LINK_FLAGS "-Wl,-search_paths_first ${CMAKE_C_LINK_FLAGS}")
 set(CMAKE_CXX_LINK_FLAGS "-Wl,-search_paths_first ${CMAKE_CXX_LINK_FLAGS}")
@@ -166,6 +170,13 @@ add_library(
     sample.cpp
 )
 
+if (OpenCV_FOUND)
+    target_link_libraries(
+        ${FRAMEWORK_NAME}
+        ${OpenCV_LIBRARIES}
+    )
+endif()
+
 set_target_properties(
     ${FRAMEWORK_NAME} PROPERTIES
     LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/SampleApp/Frameworks/
@@ -183,7 +194,3 @@ set(
     ${CMAKE_OSX_SYSROOT}/System/Library/PrivateFrameworks
     ${CMAKE_OSX_SYSROOT}/Developer/Library/Frameworks
 )
-
-if (OpenCV_FOUND)
-    target_link_libraries(${FRAMEWORK_NAME} ${OpenCV_LIBS})
-endif()

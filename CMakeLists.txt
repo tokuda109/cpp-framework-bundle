@@ -18,13 +18,12 @@ set(PROJECT_CMAKE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_CMAKE_DIRNAME})
 
 set(CMAKE_BINARY_DIR ${PROJECT_BUILD_DIR})
 set(CMAKE_MODULE_PATH ${PROJECT_CMAKE_DIR})
-# set(CMAKE_MODULE_PATH "/Users/tokuda109/Desktop/opencv/opencv/ios/build/i386-iPhoneSimulator" ${PROJECT_CMAKE_DIR})
 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BUILD_DIR})
 
-# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fobjc-arc")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fobjc-arc")
 
 project(${PACKAGE_NAME})
 
-# add_subdirectory(src/cli)
+add_subdirectory(src/cli)
 add_subdirectory(src/lib)
