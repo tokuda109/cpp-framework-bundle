@@ -1,6 +1,3 @@
-//
-// Created by Tsuyoshi Tokuda on 2017/06/26.
-//
 
 #include <iostream>
 

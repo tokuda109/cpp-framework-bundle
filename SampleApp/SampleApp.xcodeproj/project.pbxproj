@@ -8,34 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		C81729141F271AE700E634FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C81729131F271AE700E634FD /* LaunchScreen.storyboard */; };
-		C8A6B7921F0CCABA0068C9CD /* SampleLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87269EA1F01F10B00AFD41B /* SampleLib.framework */; };
-		C8A6B7931F0CCABA0068C9CD /* SampleLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C87269EA1F01F10B00AFD41B /* SampleLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C851FA911F2897B900DE9CA9 /* SampleLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C851FA901F2897B900DE9CA9 /* SampleLib.framework */; };
 		C8C143311F00AB4600483FD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C143301F00AB4600483FD0 /* AppDelegate.swift */; };
 		C8C143331F00AB4600483FD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C143321F00AB4600483FD0 /* ViewController.swift */; };
 		C8C143381F00AB4600483FD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C143371F00AB4600483FD0 /* Assets.xcassets */; };
 		C8FFD5891F2733EE00964508 /* ObjSampleLib.mm in Sources */ = {isa = PBXBuildFile; fileRef = C8FFD5881F2733EE00964508 /* ObjSampleLib.mm */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		C8A6B7941F0CCABA0068C9CD /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				C8A6B7931F0CCABA0068C9CD /* SampleLib.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		260239BA5AFE7C1E21DA38E7 /* Pods-SampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleApp/Pods-SampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		39BD9148AE7E28984A12D301 /* Pods-SampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleApp/Pods-SampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C81729131F271AE700E634FD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C81CB7461F00AF3800241622 /* SampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		C87269EA1F01F10B00AFD41B /* SampleLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SampleLib.framework; sourceTree = "<group>"; };
+		C851FA901F2897B900DE9CA9 /* SampleLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SampleLib.framework; sourceTree = "<group>"; };
 		C8C1432D1F00AB4600483FD0 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C143301F00AB4600483FD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8C143321F00AB4600483FD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8A6B7921F0CCABA0068C9CD /* SampleLib.framework in Frameworks */,
+				C851FA911F2897B900DE9CA9 /* SampleLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +87,7 @@
 		C8C143421F00AE3C00483FD0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C87269EA1F01F10B00AFD41B /* SampleLib.framework */,
+				C851FA901F2897B900DE9CA9 /* SampleLib.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -120,7 +105,6 @@
 				C8C1432A1F00AB4600483FD0 /* Frameworks */,
 				8D8ADFE97515BE3CBC6F010F /* [CP] Embed Pods Frameworks */,
 				2C19D6C3B565B72C6357A72B /* [CP] Copy Pods Resources */,
-				C8A6B7941F0CCABA0068C9CD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
